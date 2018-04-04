@@ -1,25 +1,17 @@
-html, body, .capa{
-	height: 100%
+html, body, .capa {
+	height: 100%;
+	overflow: auto;
 
 }
 
 body{
-	
-	overflow-x: hidden;
 
-	background: 
-	url('imagens/capa.png'),
+	background: url('imagens/capa.png'),
 				url('imagens/ruido.png'),
-				-webkit-linear-gradient(320deg, #32caaa, #85aeee);
-	background: 
-	url('imagens/capa.png'),
-				url('imagens/ruido.png'),
-				-o-linear-gradient(320deg, #32caaa, #85aeee);
-	background: 
-	url('imagens/capa.png'),
-				url('imagens/ruido.png'),
-				linear-gradient(50deg, #32caaa, #85aeee);
+				linear-gradient(50deg,#32caaa,#85aeee);
 	background-attachment: fixed;
+	overflow-x: hidden;
+	font-family: Helvetica,Arial,sans-serif;
 
 }
 
@@ -51,12 +43,12 @@ body{
 	margin: 16px 10px;
 }
 
-.navbar-inverse .navbar-nav>li>a, footer .nav a{
+.navbar-inverse .navbar-nav>li>a, footer .nav a {
 	color: white;
 	font-weight: bold;
 }
 
-.navbar-inverse .navbar-nav>li>a:hover, footer .nav a:hover{
+.navbar-inverse .navbar-nav>li>a:hover, footer .nav a:hover {
 	color: #9bf0e1;
 	background: none;
 }
@@ -136,7 +128,7 @@ body{
 
 .rotacionar{
 	transform: rotate(30deg);
-	
+
 	margin-left: 80px;
 }
 
