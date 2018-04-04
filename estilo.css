@@ -85,7 +85,11 @@ body{
 	padding: 10px 35px;
 	text-transform: uppercase;
 	margin: 10px 30px;
+
 	transition: background 0.4s, color 0.4s;
+	-webkit-transition: background 0.4s, color 0.4s;
+	-moz-transition: background 0.4s, color 0.4s;
+	-o-transition: background 0.4s, color 0.4s;
 }
 
 .btn-branco{
@@ -132,6 +136,7 @@ body{
 
 .rotacionar{
 	transform: rotate(30deg);
+	
 	margin-left: 80px;
 }
 
