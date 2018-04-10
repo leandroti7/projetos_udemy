@@ -42,11 +42,13 @@
 	color: red;
 	font-size: 40px;
 	font-weight: bold;
+	padding: 5px
 }
 
 
 .cenario{
 	background-image: url('../imagens/cenario.png');
 	height: 550px;
+	background-repeat:  no-repeat;
 
 }
