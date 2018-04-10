@@ -1,9 +1,11 @@
+var timerId = null; //Variavel que armazena a função da timerout
+
 function escolheNivel(){
 	var nivel = document.getElementById('nivel').value; // recebendo o valor do elemento nivel, pelo id do proprio elemento id="nivel".
 
 
 	//passando a referencia da pagina do jogo com o location.href, e atribuindo com o "?" e o nivel apontando o nivel correto do jogo
-	window.location.href = 'jogo.html?' + nivel; 
+	window.location.href = 'jogo.html?' + nivel; // Função para escolher o nivel do Jogo
 }
 
 function iniciaJogo(){
@@ -42,6 +44,27 @@ function iniciaJogo(){
 	// imprimir qtad de balões
 	document.getElementById('qtd_be').innerHTML = 0;
 
+	countTempo(tempo_seg + 1); // Função geral que inicia o jogo e suas ações durante cada partida
+}
+
+function countTempo(segundos){
+
+	segundos = segundos -1;
+
+	if(segundos == -1){
+		clearTimeout(timerId); // Finaliza a execução da função setTimerout
+		game_over();
+		return false;
+	}
+
+
+	document.getElementById('cronometro').innerHTML = segundos; 
+
+	timerId = setTimeout("countTempo("+segundos+")",1000); // A cada 1000 segundos  chama a função countTempo com o parametro de segundos // Função que incrementa o tempo de cada nivel no jogo
+}
+
+function game_over(){
+	alert('Você não conseguiu estourar todos os balões a tempo');
 }
 
 function cria_baloes(qtd_baloes){
@@ -49,7 +72,12 @@ function cria_baloes(qtd_baloes){
 		var balao = document.createElement("img");
 		balao.src ="imagens/balao_azul_pequeno.png";
 		balao.style.margin = '10px';
+		balao.onclick = function(){estourar(this);};
 
 		document.getElementById('cenario').appendChild(balao);
-	}
+	} // Função que cria os balões a ser estourado no jogo
+}
+
+function estourar(){
+	alert('Balão estourado');
 }
