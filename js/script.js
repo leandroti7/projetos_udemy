@@ -54,9 +54,6 @@ function iniciaJogo(){
 	document.getElementById('qtd_be').innerHTML = 0;
 
 	countTempo(tempo_seg + 1); // Função geral que inicia o jogo e suas ações durante cada partida
-
-   
-
 }
 
 function countTempo(segundos){
@@ -76,6 +73,7 @@ function countTempo(segundos){
 }
 
 function game_over(){
+	remove_evento_baloes();
 	alert('Você não conseguiu estourar todos os balões a tempo');
 }
 
@@ -84,7 +82,7 @@ function cria_baloes(qtd_baloes){
 		var balao = document.createElement("img"); // variavel balão que recebe os elemntos img que serão os balões do jogo
 		balao.src ="imagens/balao_azul_pequeno.png"; // Inserindo uma imagem de fundo nos balões do jogo
 		balao.style.margin = '10px 5px'; // Aplicando um margin nos balões
-		balao.id = 'b'+i; // definindo um id para cad um balão criado no jogo 
+		balao.id = 'b'+i; // definindo um id para cada um balão criado no jogo 
 		balao.onclick = function(){estourar(this);};
 
 		document.getElementById('cenario').appendChild(balao); // 
@@ -95,10 +93,23 @@ function estourar(e){
 
 	var id_balao = e.id; // Variavel que recebe o id do elemento que está sendo estourado
 
+	document.getElementById(id_balao).setAttribute("onclick",""); // Elimina a função onclick e impede a possibilidade de clicar no balão ja estourado
 	document.getElementById(id_balao).src = 'imagens/balao_azul_pequeno_estourado.png';
 	//alert(id_balao);
 
 	pontos(-1);
+}
+
+function remove_evento_baloes(){
+	var i = 1; // contador para recuperar balões por id
+
+	//percorre os elmentos de acordo com o id e só ira sair do laço quando não houver correspondência com o elemento
+	while(document.getElementById('b'+i)){
+		//retira o evento onclick do elemento
+		document.getElementById('b'+i).onclick = '';
+		i++; // incrementa no id a cada iteração
+	}
+
 }
 
 
