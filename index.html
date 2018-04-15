@@ -3,35 +3,39 @@
 	<head>
 		<meta charset="UTF-8">
 
-
-		<title>Estourando balões</title>
-		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+		<title>Jogo da velha</title>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" 
+		integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+		<script src="jquery/jquery-3.3.1.js"></script>
 		<link rel="stylesheet" href="css/estilo.css">
-
-		<script src="js/script.js">
-			
-		</script>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 	</head>
 
 	<body>
 		<div class="container">
-			<div class="section col-sm-10">
-				<div class="row form-group">
-						<label class="col-sm-6 col-form-label">Selecione o Nivel :</label>
+				<div class="player center-block">
+					<div class="row">
+						<h1 class="titulo">Jogo da Velha #</h1>
 
-						<div class="col-sm-6">
-							<select name="nivel" class="form-control" id="nivel">
-								<option value="1">Fácil</option>
-								<option value="2">Normal</option>
-								<option value="3">Difícil</option>
-								<option value="4">Expert</option>
-							</select>
+						<div class="p1 col-sm-4 center-block ">
+							<i class="fas fa-user-circle fa-8x"></i>
+							<p>Player 1</p>
 						</div>
+						
+						<div class="play col-sm-4 center-block ">
+							<a href="jogo.html">
+								<img src="imagens/iniciar.png" alt="">
+							</a>
+						</div>
+						
+						<div class="p2 col-sm-4 center-block ">
+							<i class="fas fa-user-circle fa-8x"></i>
+							<p>Player 2</p>
+						</div>
+
+					</div>
 				</div>
-				<img src="imagens/iniciar.png" onclick="escolheNivel()" alt="">
-			</div>	
 		</div>
 
 	</body>
-	
 </html>

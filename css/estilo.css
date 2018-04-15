@@ -1,54 +1,70 @@
-.section{
-	background-color:#F0F8FF;
-	margin: 50px auto;
+.player{
+	width: 50%;
+	margin: 200px auto;
+	border-radius: 5px;
+	background-color: #e3e3e3e3;
+	box-shadow: 2px 5px 8px;
+}
+.tab{
+	width: 50%;
+	display: block;
+
+	margin: 200px auto;
 }
 
-.tools{
-	border: 1px solid #fff;
-	background-color: #fff;		
-
-}
-
-.jogo{
-	/*border: 1px solid blue;*/
-	background-color: #fff;
-}
-
-.main{
-	background-color: #fc12;
-	margin-top: 50px;
-}
-.crono{
-	width: 100px;
-	height: 100px;
-	background-image: url('../imagens/cronometro.png');
-	background-size: contain;
-	background-repeat: no-repeat; 
-
+.play,.p1,.p2{
+	display: block;
+	width: 30px;
 	text-align: center;
+
+	margin-top: 8%;
+}
+
+/* ================ Tabuleiro do Joggo ================== */
+
+.area{
+	height: 150px;
+	border: 2px solid #fff;
+	background-color: #c1c1c1c1;
+	padding: 5px;
+}
+
+.posicao1,.posicao2{
+	width: 20%;
+	text-align: center;
+	display: block;
+	margin-top: 350px;
+}
+
+.posicao1{
+	float: left;
+}
+.posicao2{
+	float: right;
+}
+
+/*  =================   Tipografia  ================== */
+.p1{
+	color: blue;
+}
+.p2{
 	color: red;
-	font-size: 20px;
-	font-weight: bold;
-	line-height: 95px;
 }
 
-.bal_e{
-	color: green;
-	font-size: 40px;
-	font-weight: bold;
+p{
+	color: #5054cc;
+	font-size: 18px;
 }
 
-.bal{
-	color: red;
-	font-size: 40px;
-	font-weight: bold;
-	padding: 5px
+.titulo{
+	text-align: center;
+	color:  #33b844;
+	text-shadow: 2px 3px 2px gray;
 }
 
-
-.cenario{
-	background-image: url('../imagens/cenario.png');
-	height: 550px;
-	background-repeat:  no-repeat;
-
+.topo h1{
+	text-align: center;
+	color: #1514aaaa;
+	font-size: 50px;
+	 text-shadow: 2px 3px 2px gray;
 }
