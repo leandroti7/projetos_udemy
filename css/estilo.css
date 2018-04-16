@@ -1,0 +1,86 @@
+.player{
+	width: 50%;
+	margin: 200px auto;
+	border-radius: 5px;
+	background-color: #e3e3e3e3;
+	box-shadow: 2px 5px 8px;
+}
+.tab{
+	width: 50%;
+	display: block;
+
+	margin: 200px auto;
+}
+
+.play,.p1,.p2{
+	display: block;
+	width: 30px;
+	text-align: center;
+
+	margin-top: 8%;
+}
+
+/* ================ Tabuleiro do Joggo ================== */
+.palco_jogo{
+	display: none;
+}
+.o{
+	color: blue;
+	text-shadow: 2px 4px 2px 4px;
+}
+i{
+	text-shadow: 2px 3px 2px gray;
+}
+.x{
+	color: red;
+	text-shadow: 2px 4px 2px 4px;
+}
+.area{
+	height: 150px;
+	border: 2px solid #fff;
+	background-color: #c1c1c1c1;
+	padding: 5px;
+
+	font-size: 110px;
+	text-align: center;
+}
+
+.posicao1,.posicao2{
+	width: 20%;
+	text-align: center;
+	display: block;
+	margin-top: 350px;
+}
+
+.posicao1{
+	float: left;
+}
+.posicao2{
+	float: right;
+}
+
+/*  =================   Tipografia  ================== */
+.p1{
+	color: blue;
+}
+.p2{
+	color: red;
+}
+
+p{
+	color: #5054cc;
+	font-size: 18px;
+}
+
+.titulo{
+	text-align: center;
+	color:  #33b844;
+	text-shadow: 2px 3px 2px gray;
+}
+
+.topo h1{
+	text-align: center;
+	color: #1514aaaa;
+	font-size: 50px;
+	text-shadow: 2px 3px 2px gray;
+}
