@@ -9,9 +9,11 @@ const webpack = require('webpack');
 module.exports = {
     //entry: entrada arquivo no qual vai estar o script js
     //output: saida com nome e destino no qual vai ser criado o script minificado
-    entry: './src/js/main.js',
+    entry: {
+        app: './src/js/main.js',
+    },
     output: {
-        filename: 'app.js',
+        filename: 'app.[chunkhash].js',
         path: path.resolve(__dirname, 'dist')
     },
     //instanciando plugins usados para minificar ou manipular o html e o css
@@ -21,7 +23,7 @@ module.exports = {
             template: './public/index.html'
         }),
         new MiniCssExtractPlugin({
-            filename: 'app.css'
+            filename: 'app.[chunkhash].css'
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
@@ -66,5 +68,6 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+    devtool: 'source-map'
 }
