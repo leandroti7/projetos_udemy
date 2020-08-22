@@ -61,11 +61,8 @@ module.exports = {
                 }
             },
             {
-                test: /\.(jge?g|png|gif|svg)$/i,
-                loader: 'file-loader',
-                options: {
-                    name: '[name].[ext]'
-                }
+                test: /\.(eot|woff|woff2|ttf|svg|png|jpg)$/,
+                loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
             }
         ]
     },
